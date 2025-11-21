@@ -113,13 +113,17 @@ $userName = $loggedIn ? htmlspecialchars($_SESSION['user_name'], ENT_QUOTES, 'UT
     cursor: pointer;
     background: transparent;
     border: 0;
-    color: inherit;
+    color: black;
 }
 
 /* Responsive: collapse into column on small screens */
 @media (max-width: 700px) {
-    .h-navbar { align-items: flex-start; }
-    .nav-toggle { display: block; }
+    .h-navbar { align-items: flex-start;
+    background:#fff }
+    .nav-toggle { display: block; 
+    position: absolute;
+    right:2px;
+    }
     .nav-links, .menu {
         width: 100%;
         flex-direction: column;
@@ -135,12 +139,15 @@ $userName = $loggedIn ? htmlspecialchars($_SESSION['user_name'], ENT_QUOTES, 'UT
     <a class="brand" href="/index.php"><span class="mark">H</span> <span class="brand-text">Hospital</span></a>
 
     <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('show'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');">
-        ☰
+        <span class="toggle-icon" aria-hidden="true" onclick="const btn=this.closest('button'); this.textContent = this.textContent === '☰' ? '✕' : '☰'; btn.setAttribute('aria-label', this.textContent === '✕' ? 'Close navigation' : 'Toggle navigation');">☰</span>
     </button>
+    <!--  -->
+   
 
     <ul class="nav-links menu">
-        <li class="<?= isActive('home.php') ?>"><a href="../pages/home.php">Home</a></li>
+        <li class="<?= isActive('home.php') ?>"><a href="../home.php">Home</a></li>
         <li class="<?= isActive('services.php') ?>"><a href="../pages/services.php">Services</a></li>
+         <li class="<?= isActive('doctors.php') ?>"><a href="../pages/doctors.php">Doctors</a></li>
         <li class="<?= isActive('about.php') ?>"><a href="../pages/about.php">About Us</a></li>
         <li class="<?= isActive('book.php') ?>"><a class="btn " href="../pages/appointment.php">Book Appointment</a></li>
         <?php if ($loggedIn): ?>
@@ -151,3 +158,4 @@ $userName = $loggedIn ? htmlspecialchars($_SESSION['user_name'], ENT_QUOTES, 'UT
         <?php endif; ?>
     </ul>
 </nav>
+

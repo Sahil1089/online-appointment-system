@@ -152,7 +152,7 @@
    <div class="head" style="position:absolute;top:0;left:0;
    height:60px;
    background-color:white;color:red;width:100%">
-   <?php include '../components/navbar.php'; ?>
+   <?php include './components/navbar.php'; ?>
    
 </div>
      </section>
@@ -162,8 +162,8 @@
 
     <!-- HERO -->
     <main>
-        <section class="hero">
-            <div class="hero-card fade-up">
+        <section  class="hero">
+            <div style="width:90%;" class="hero-card fade-up">
                 <h1>Quality Healthcare at Your Fingertips</h1>
                 <p>We provide trusted medical services, online appointments, and patient-centered care. Fast, secure, and compassionate — all in one place.</p>
 
@@ -195,39 +195,7 @@
                 </div>
             </div>
 
-            <aside class="hero-visual fade-up">
-                <div class="hero-visual-inner" style="width:100%;">
-                    <div class="hero-visual">
-                        <div class="hero-visual">
-                            <div class="hero-visual" style="padding:10px;background:transparent;box-shadow:none;">
-                                <div class="badge">
-                                    <div style="display:flex;justify-content:space-between;align-items:center;">
-                                        <div>
-                                            <strong style="font-size:15px">Dr. Maria Alvarez</strong>
-                                            <div style="font-size:13px;color:var(--muted);">Cardiologist • 4.9 ★</div>
-                                        </div>
-                                        <div style="font-size:12px;color:var(--muted)">Next avail: Mon 11:00</div>
-                                    </div>
-
-                                    <div style="display:flex;gap:10px;align-items:center;">
-                                        <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=0b5f7d0f0a4ab44409a7b8d8e9b9a4d1" alt="doctor" style="width:72px;height:72px;border-radius:12px;object-fit:cover;">
-                                        <div style="flex:1">
-                                            <div style="font-weight:600">General consultation</div>
-                                            <div style="color:var(--muted);font-size:13px">30 min • $45</div>
-                                        </div>
-                                        <a href="#book" class="btn btn-primary" style="height:42px;align-self:center">Book</a>
-                                    </div>
-
-                                    <div style="margin-top:6px;display:flex;gap:8px;align-items:center;">
-                                        <div style="font-size:13px;color:var(--muted)">Insurance accepted</div>
-                                        <div style="margin-left:auto;font-size:13px;color:var(--muted)">Secure payments</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </aside>
+           
         </section>
 
         <!-- SERVICES -->

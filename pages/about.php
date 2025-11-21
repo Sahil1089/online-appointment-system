@@ -44,7 +44,7 @@
      </section>
     <main>
         <header class="hero">
-            <div class="container">
+            <div style="margin-top:2.45rem;" class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7">
                         <h1 class="display-6 mb-3">About Us – Hospital Management System</h1>

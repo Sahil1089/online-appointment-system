@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="card" style="position:relative;">
     <h2>Register</h2>
      <button style="position:absolute; padding:14px;border:none; border-radius:4px; cursor:pointer; text-decoration:none; color:black;background:#e6f0ff; 
-            right:16px;bottom:56px;"class="btn-primary"><a href="../pages/home.php">Back</a></button>
+            right:16px;bottom:56px;"class="btn-primary"><a href="../home.php">Back</a></button>
 
     <?php if (!empty($success)): ?>
         <div class="success"><?php echo $success; ?></div>
