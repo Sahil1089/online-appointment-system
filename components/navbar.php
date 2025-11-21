@@ -1,3 +1,6 @@
+
+
+
 <?php
 
 
@@ -150,11 +153,30 @@ $userName = $loggedIn ? htmlspecialchars($_SESSION['user_name'], ENT_QUOTES, 'UT
          <li class="<?= isActive('doctors.php') ?>"><a href="../pages/doctors.php">Doctors</a></li>
         <li class="<?= isActive('about.php') ?>"><a href="../pages/about.php">About Us</a></li>
         <li class="<?= isActive('book.php') ?>"><a class="btn " href="../pages/appointment.php">Book Appointment</a></li>
+
+
+
+
+
+<!-- login or profile -->
+
         <?php if ($loggedIn): ?>
-            <li class="<?= isActive('dashboard.php') ?>"><a class="btn btn-outline" href="/dashboard.php">Dashboard</a></li>
-            <li><a class="btn btn-outline" href="/logout.php">Logout (<?= $userName ?>)</a></li>
+            <li class="<?= isActive('dashboard.php') ?>"><a class="btn btn-outline" href="../user/patientprofile.php">My Profile</a></li>
+            <li><a class="btn btn-outline" href="../authentication/logout.php">Logout
+                
+                </a></li>
         <?php else: ?>
-            <li class="<?= isActive('login.php') ?>"><a class="btn btn-outline" href="../authentication/login.php">Login</a></li>
+             <li class="<?= isActive('login.php') ?>"><a class="btn btn-outline" href="../authentication/login.php">Login</a></li> 
+
+<!--end login or profile  -->
+
+
+<!-- end -->
+
+
+
+
+
         <?php endif; ?>
     </ul>
 </nav>

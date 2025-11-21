@@ -1,0 +1,137 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.35);
+    --text-light: #f1f1f1;
+    --active-bg: rgba(255, 255, 255, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4c6ef5, #7950f2);
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    background: var(--glass-bg);
+    border-right: 1px solid var(--glass-border);
+    padding: 20px 15px;
+    transition: width 0.3s ease;
+    position: fixed;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4c6ef5;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.title {
+    color: var(--text-light);
+    font-size: 20px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.sidebar.collapsed .title {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Menu */
+.menu {
+    margin-top: 30px;
+    list-style: none;
+}
+
+.menu li {
+    margin: 12px 0;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background 0.3s;
+}
+
+.menu li.active a,
+.menu li a:hover {
+    background: var(--active-bg);
+}
+
+.sidebar.collapsed .menu li a span {
+    display: none;
+}
+
+/* Content */
+.content {
+    margin-left: 250px;
+    padding: 40px;
+    color: white;
+    transition: margin-left 0.3s;
+}
+
+.sidebar.collapsed + .content {
+    margin-left: 80px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px;
+        position: fixed;
+        z-index: 100;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}

@@ -1,4 +1,30 @@
 <?php
+session_start();
+
+$_SESSION['user'] = [
+    'id'=>'u1',
+    'name' => 'sahil kumar',
+    'email' => 'sahil@example.com',
+    'phone' => '9876543210',
+    'address' => '123 Street, delhi',
+    'gender' => 'Male',
+    'dob' => '1995-06-12',
+    'latest_tests' => [
+        ['name' => 'Blood Test', 'date' => '2024-11-10', 'file' => 'blood_report.pdf'],
+        ['name' => 'X-Ray', 'date' => '2024-11-01', 'file' => 'xray.pdf']
+    ],
+  
+    'appointments' => [
+        ['doctor' => 'Dr. Smith', 'date' => '2024-12-01', 'status' => 'Completed'],
+        ['doctor' => 'Dr. Amy', 'date' => '2024-12-15', 'status' => 'Upcoming']
+    ]
+];
+?>
+
+<!--  -->
+
+
+<?php
 // /c:/xampp/htdocs/hospital/pages/home.php
 ?><!doctype html>
 <html lang="en">
@@ -168,8 +194,8 @@
                 <p>We provide trusted medical services, online appointments, and patient-centered care. Fast, secure, and compassionate — all in one place.</p>
 
                 <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                    <a href="#book" class="btn btn-primary">Book an Appointment</a>
-                    <a href="#services" class="btn btn-outline">Explore Services</a>
+                    <a href="./components/bookingform.php" class="btn btn-primary">Book an Appointment</a>
+                    <a href="./pages/services.php" class="btn btn-outline">Explore Services</a>
                 </div>
 
                 <div style="margin-top:20px;">
@@ -259,7 +285,9 @@
                     </div>
                 </div>
                 <div class="cta">
-                    <a href="#book" class="btn btn-primary">Schedule Now</a>
+                    <a href="./components/minibook.php" 
+                    
+                    class="btn btn-primary">Schedule Now</a>
                 </div>
             </div>
 

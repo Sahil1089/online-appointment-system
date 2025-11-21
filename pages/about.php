@@ -51,7 +51,7 @@
                         <p class="lead text-muted mb-4">
                             Welcome to our Hospital Management System, a comprehensive digital solution designed to simplify, enhance, and modernize healthcare operations. Our platform connects patients, doctors, nurses, administrators, and support staff through a secure and intelligent system that ensures seamless hospital workflow and improved quality of care.
                         </p>
-                        <a href="#contact" class="btn btn-primary me-2">Contact Sales</a>
+                        <a href="../components/contact.php" class="btn btn-primary me-2">Contact Sales</a>
                         <a href="#features" class="btn btn-outline-primary">See Features</a>
                     </div>
                     <div class="col-lg-5 d-none d-lg-block">
@@ -223,7 +223,7 @@
                         <p class="text-muted mb-0">Reach out to our team to discuss needs, pricing, or a trial environment.</p>
                     </div>
                     <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                        <a href="mailto:sales@example.com" class="btn btn-primary">Contact Sales</a>
+                        <a href="../components/contact.php" class="btn btn-primary">Contact Sales</a>
                     </div>
                 </div>
             </div>
