@@ -152,16 +152,21 @@
 
     <hr style="border:none; height:1px; background:linear-gradient(90deg, rgba(0,0,0,0.04), rgba(255,255,255,0.4)); margin:10px 0;">
 
-    <nav class="nav flex-column">
+    <!-- <nav class="nav flex-column">
       <a class="nav-link active" href="#"><i class="bi bi-speedometer2"></i> Dashboard</a>
       <a class="nav-link" href="#"><i class="bi bi-people"></i> Patients</a>
-      <a class="nav-link" href="#"><i class="bi bi-person-badge"></i> Doctors</a>
+
+      <a class="nav-link" 
+      href="./doctormanagement.php">
+      <i class="bi bi-person-badge"></i> Doctors</a>
+
       <a class="nav-link" href="#"><i class="bi bi-clipboard-data"></i> Departments</a>
       <a class="nav-link" href="#"><i class="bi bi-calendar3"></i> Appointments</a>
       <a class="nav-link" href="#"><i class="bi bi-file-medical"></i> Tests & Labs</a>
       <a class="nav-link" href="#"><i class="bi bi-wallet2"></i> Billing</a>
       <a class="nav-link" href="#"><i class="bi bi-gear"></i> Settings</a>
-    </nav>
+    </nav> -->
+    <?php include 'components/sidebarnav.php'; ?>
 
     <div style="margin-top:18px;">
       <div class="small text-uppercase text-muted mb-2">Quick actions</div>
@@ -188,16 +193,8 @@
     <div class="offcanvas-body p-0">
       <!-- reuse same sidebar content -->
       <aside class="sidebar">
-        <nav class="nav flex-column p-2">
-          <a class="nav-link active" href="#"><i class="bi bi-speedometer2"></i> Dashboard</a>
-          <a class="nav-link" href="#"><i class="bi bi-people"></i> Patients</a>
-          <a class="nav-link" href="#"><i class="bi bi-person-badge"></i> Doctors</a>
-          <a class="nav-link" href="#"><i class="bi bi-clipboard-data"></i> Departments</a>
-          <a class="nav-link" href="#"><i class="bi bi-calendar3"></i> Appointments</a>
-          <a class="nav-link" href="#"><i class="bi bi-file-medical"></i> Tests & Labs</a>
-          <a class="nav-link" href="#"><i class="bi bi-wallet2"></i> Billing</a>
-          <a class="nav-link" href="#"><i class="bi bi-gear"></i> Settings</a>
-        </nav>
+
+        <?php include 'components/sidebarnav.php'; ?>
 
         <div style="margin:18px;">
           <div class="small text-uppercase text-muted mb-2">Quick actions</div>

@@ -96,7 +96,7 @@ function e($v) {
     <div class="card"  style="position:relative;">
         <?php if ($action === 'login'): ?>
             <h2>Login</h2>  
-            <button style="position:absolute; padding:12px;border:none; border-radius:4px; cursor:pointer; text-decoration:none; color:black;
+ <button style="position:absolute; padding:12px;border:none; border-radius:4px; cursor:pointer; text-decoration:none; color:black;
             right:16px;top:16px;"class="btn-primary"><a href="../home.php">Back</a></button>
         <?php else: ?>
             <h2>Forgot Password</h2>
