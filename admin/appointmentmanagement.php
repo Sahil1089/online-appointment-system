@@ -385,6 +385,10 @@ function escapeHtml(s) { if (s === null || s === undefined) return ''; return St
 renderAll();
 </script>
 
-
+       <a href="javascript:history.back()" 
+   style="padding:8px 18px; position:sticky;
+   top:0px;right:1px;background-color:whitesmoke; text-decoration:none; margin-right:auto;">
+    Back
+</a>
 </body>
 </html>

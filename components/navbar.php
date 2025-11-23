@@ -14,6 +14,7 @@ function isActive($name) {
 // Example: if you set $_SESSION['user_name'] when logged in, it will show as logged in.
 $loggedIn = !empty($_SESSION['user_name']);
 $userName = $loggedIn ? htmlspecialchars($_SESSION['user_name'], ENT_QUOTES, 'UTF-8') : '';
+$loggedIn = TRUE;
 ?>
 <style>
 /* New navbar styles (adapted from provided snippet) */
@@ -148,11 +149,12 @@ $userName = $loggedIn ? htmlspecialchars($_SESSION['user_name'], ENT_QUOTES, 'UT
    
 
     <ul class="nav-links menu">
-        <li class="<?= isActive('home.php') ?>"><a href="../home.php">Home</a></li>
+        <li class="<?= isActive('index.php') ?>"><a href="../index.php">Home</a></li>
         <li class="<?= isActive('services.php') ?>"><a href="../pages/services.php">Services</a></li>
          <li class="<?= isActive('doctors.php') ?>"><a href="../pages/doctors.php">Doctors</a></li>
         <li class="<?= isActive('about.php') ?>"><a href="../pages/about.php">About Us</a></li>
         <li class="<?= isActive('book.php') ?>"><a class="btn " href="../pages/appointment.php">Book Appointment</a></li>
+ <li class="<?= isActive('admin.php') ?>"><a class="btn " href="../admin/sidebar.php">test admin panel</a></li>
 
 
 

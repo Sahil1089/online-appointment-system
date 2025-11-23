@@ -51,7 +51,7 @@ $_SESSION['user'] = [
             color-scheme: light;
         }
 
-        html,body{height:100%; margin:0; background:var(--bg); color:#0f172a; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+        html,body{height:100%; width:100%; margin:0; background:var(--bg); color:#0f172a; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
 
         /* NAV */
         .nav{

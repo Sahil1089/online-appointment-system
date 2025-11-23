@@ -1,0 +1,56 @@
+ 
+    :root{
+      --sky-1:#E0F6FF;
+      --sky-2:#C9EEFF;
+      --accent:#38BDF8;
+      --muted:#6b7280;
+      --glass-bg: rgba(255,255,255,0.55);
+      --card-blur: 8px;
+    }
+
+    /* Page layout */
+    body{
+      background: linear-gradient(180deg, #f6fbff 0%, #eef9ff 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #0f172a;
+      padding: 24px;
+    }
+
+    .page-wrap{ max-width: 1200px; margin: 0 auto; }
+
+    /* Header */
+    .page-title { display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+    .page-title h1{ font-size:20px; margin:0; color:#0b1220; font-weight:700; }
+
+    /* Glass card */
+    .glass-card{
+      background: var(--glass-bg);
+      border-radius: 14px;
+      padding:18px;
+      box-shadow: 0 6px 24px rgba(14,30,50,0.06);
+      backdrop-filter: blur(var(--card-blur));
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+
+    .avatar { width:96px; height:96px; border-radius:12px; object-fit:cover; border: 3px solid rgba(255,255,255,0.7); box-shadow: 0 6px 18px rgba(14,30,50,0.06); }
+    .name { font-weight:700; font-size:1.1rem; margin-top:8px; }
+    .meta { color:var(--muted); font-size:0.95rem; margin-bottom:8px; }
+    .muted-small { color:var(--muted); font-size:0.9rem; }
+
+    /* lists */
+    .list-item{ display:flex; align-items:flex-start; gap:12px; padding:10px; border-radius:10px; background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45)); border:1px solid rgba(200,230,250,0.6); margin-bottom:10px; }
+    .chip{ width:44px; height:44px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(140deg, rgba(56,189,248,0.12), rgba(56,189,248,0.06)); color:var(--accent); font-weight:700; font-size:1.1rem; }
+
+    .tile { border-radius:12px; padding:14px; text-align:left; background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45)); border: 1px solid rgba(200,230,250,0.6); box-shadow: 0 6px 16px rgba(14,30,50,0.04); }
+
+    /* table styles */
+    .table thead th { border-bottom: none; color: var(--muted); font-size:0.9rem; font-weight:600; }
+    .table tbody td { vertical-align: middle; border-top: none; background: transparent; }
+
+    /* small stat cards */
+    .stat { display:flex; align-items:center; gap:12px; padding:12px; border-radius:12px; background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.5)); border: 1px solid rgba(200,230,250,0.6); }
+    .stat .num { font-weight:800; font-size:1.2rem; color:#06283D; }
+
+    /* responsive tweaks */
+    @media (max-width: 1200px){ .avatar { width:86px; height:86px; } }
+    @media (max-width: 767px){ body{ padding:12px; } }
